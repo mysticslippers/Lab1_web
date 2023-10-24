@@ -1,6 +1,6 @@
 const dataSet = [0, 0, 0];
 const yRegExp = new RegExp("^([-+]?\\d+[.]?\\d{0,15})$");
-document.getElementById('form-user-input-id').addEventListener('submit', function(event){
+document.getElementById('data-form-id').addEventListener('submit', function(event){
     event.preventDefault();
     if(validate(this)){
        handleRequest(dataSet[0], dataSet[1], dataSet[2]);

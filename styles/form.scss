@@ -1,0 +1,157 @@
+@import "templates";
+
+.data{
+  @extend %divs;
+  @include divs_position(20px, 250px);
+  @include divs_sizes(450px, 400px);
+
+  .data-form p,
+  .x-input-label,
+  .y-input-label,
+  .r-input-label{
+    @extend %fonts;
+    @include font_size_align(16px, left);
+  }
+
+  .x-input-label{
+    display: inline-flex;
+    align-items: center;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+
+  .y-input-label{
+    display: block;
+  }
+}
+
+#x-input-form-id{
+  input{
+    appearance: none;
+    -webkit-appearance: none;
+    display: none;
+  }
+
+  .custom-radio{
+    height: 14px;
+    width: 14px;
+    border: 2px solid whitesmoke;
+    border-radius: 50%;
+    margin-right: 10px;
+    box-sizing: border-box;
+    background: $background_empty_color;
+
+    &:after{
+      content: "";
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+      display: block;
+      background: $focus_color;
+      transform: scale(0);
+      transition: transform 0.2s;
+    }
+
+    &:focus,
+    &:hover,
+    &:active{
+      background: $focus_color;
+      box-shadow: 0 0 20px $box_shadow_color;
+      transform: scale(1.01);
+      transition: 0.3s;
+    }
+  }
+
+  input:checked + .custom-radio:after{
+    transform: scale(1);
+  }
+}
+
+#y-input-form-id{
+  label{
+    display: block;
+  }
+
+  input{
+    @extend %fonts;
+    @include font_size_align(16px, left);
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+    @include underline_border(2px);
+    background: transparent;
+  }
+}
+
+#r-input-form-id{
+  .checkbox-input{
+    display: none;
+  }
+
+  label{
+    cursor: pointer;
+  }
+
+  .checkbox-fake{
+    display: inline-block;
+    height: 18px;
+    width: 18px;
+    border: 1px $background_empty_color;
+    border-radius: 5px;
+    background-color: $background_empty_color;
+    position: relative;
+
+    &:before{
+      content: "";
+      display: inline-block;
+      height: 18px;
+      width: 18px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: url("../public/tick-circle.svg") no-repeat;
+      background-size: 18px 18px;
+      opacity: 0;
+      transition: .2s;
+    }
+
+    &:focus,
+    &:hover,
+    &:active{
+      background: url("../public/tick-circle.svg") no-repeat;
+      background-size: 18px 18px;
+      box-shadow: 0 0 20px $box_shadow_color;
+      transform: translate(0, -30%);
+      transition: 0.3s;
+    }
+  }
+
+  .checkbox-input:checked + .checkbox-fake:before{
+    opacity: 1;
+  }
+}
+
+.button-submit, .button-clear-data{
+  @extend %buttons;
+
+  & span{
+    @extend %fonts;
+    @include font_size_align(14px, left);
+  }
+
+  &:focus,
+  &:hover,
+  &:active{
+    background: $focus_color;
+    box-shadow: 0 0 20px $box_shadow_color;
+    transform: scale(1.1);
+  }
+}
+
+.error-label{
+  display: inline-block;
+  color: $error_text_color;
+  font-weight: bold;
+  margin-bottom: 10px;
+}

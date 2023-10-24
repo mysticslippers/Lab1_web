@@ -1,0 +1,232 @@
+.coordinate-plane, .data, .header {
+  background-color: #faa5a5;
+  margin: auto;
+  border-radius: 28px;
+  position: absolute;
+  padding: 15px;
+  border: 5px black solid;
+}
+
+.button-submit span, .button-clear-data span, #y-input-form-id input, .data .data-form p,
+.data .x-input-label,
+.data .y-input-label,
+.data .r-input-label, .header .presentation p {
+  font-weight: bold;
+  font-family: Times, Times New Roman, serif;
+  color: black;
+}
+
+.button-submit, .button-clear-data {
+  border: 1px black solid;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.header {
+  left: 20px;
+  top: 0;
+  height: 150px;
+  width: 300px;
+}
+.header .presentation p {
+  font-size: 20px;
+  text-align: left;
+}
+
+.coordinate-plane, .data, .header {
+  background-color: #faa5a5;
+  margin: auto;
+  border-radius: 28px;
+  position: absolute;
+  padding: 15px;
+  border: 5px black solid;
+}
+
+.button-submit span, .button-clear-data span, #y-input-form-id input, .data .data-form p,
+.data .x-input-label,
+.data .y-input-label,
+.data .r-input-label, .header .presentation p {
+  font-weight: bold;
+  font-family: Times, Times New Roman, serif;
+  color: black;
+}
+
+.button-submit, .button-clear-data {
+  border: 1px black solid;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.data {
+  left: 20px;
+  top: 250px;
+  height: 450px;
+  width: 400px;
+}
+.data .data-form p,
+.data .x-input-label,
+.data .y-input-label,
+.data .r-input-label {
+  font-size: 16px;
+  text-align: left;
+}
+.data .x-input-label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.data .y-input-label {
+  display: block;
+}
+
+#x-input-form-id input {
+  appearance: none;
+  -webkit-appearance: none;
+  display: none;
+}
+#x-input-form-id .custom-radio {
+  height: 14px;
+  width: 14px;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+  margin-right: 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+#x-input-form-id .custom-radio:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: block;
+  background: #ff4c77;
+  transform: scale(0);
+  transition: transform 0.2s;
+}
+#x-input-form-id .custom-radio:focus, #x-input-form-id .custom-radio:hover, #x-input-form-id .custom-radio:active {
+  background: #ff4c77;
+  box-shadow: 0 0 20px #E40045;
+  transform: scale(1.01);
+  transition: 0.3s;
+}
+#x-input-form-id input:checked + .custom-radio:after {
+  transform: scale(1);
+}
+
+#y-input-form-id label {
+  display: block;
+}
+#y-input-form-id input {
+  font-size: 16px;
+  text-align: left;
+  width: 100%;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px black solid;
+  background: transparent;
+}
+
+#r-input-form-id .checkbox-input {
+  display: none;
+}
+#r-input-form-id label {
+  cursor: pointer;
+}
+#r-input-form-id .checkbox-fake {
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  border: 1px #fff;
+  border-radius: 5px;
+  background-color: #fff;
+  position: relative;
+}
+#r-input-form-id .checkbox-fake:before {
+  content: "";
+  display: inline-block;
+  height: 18px;
+  width: 18px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: url("../public/tick-circle.svg") no-repeat;
+  background-size: 18px 18px;
+  opacity: 0;
+  transition: 0.2s;
+}
+#r-input-form-id .checkbox-fake:focus, #r-input-form-id .checkbox-fake:hover, #r-input-form-id .checkbox-fake:active {
+  background: url("../public/tick-circle.svg") no-repeat;
+  background-size: 18px 18px;
+  box-shadow: 0 0 20px #E40045;
+  transform: translate(0, -30%);
+  transition: 0.3s;
+}
+#r-input-form-id .checkbox-input:checked + .checkbox-fake:before {
+  opacity: 1;
+}
+
+.button-submit span, .button-clear-data span {
+  font-size: 14px;
+  text-align: left;
+}
+.button-submit:focus, .button-submit:hover, .button-submit:active, .button-clear-data:focus, .button-clear-data:hover, .button-clear-data:active {
+  background: #ff4c77;
+  box-shadow: 0 0 20px #E40045;
+  transform: scale(1.1);
+}
+
+.error-label {
+  display: inline-block;
+  color: #ff0000;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.coordinate-plane, .header, .data {
+  background-color: #faa5a5;
+  margin: auto;
+  border-radius: 28px;
+  position: absolute;
+  padding: 15px;
+  border: 5px black solid;
+}
+
+.header .presentation p, .data .data-form p,
+.data .x-input-label,
+.data .y-input-label,
+.data .r-input-label, #y-input-form-id input, .button-submit span, .button-clear-data span {
+  font-weight: bold;
+  font-family: Times, Times New Roman, serif;
+  color: black;
+}
+
+.button-submit, .button-clear-data {
+  border: 1px black solid;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.coordinate-plane {
+  height: 400px;
+  width: 400px;
+  left: 500px;
+  top: 250px;
+}
+
+html {
+  height: 100%;
+  background: url("../public/background.gif") no-repeat fixed;
+}
+
+/*# sourceMappingURL=main.css.map */

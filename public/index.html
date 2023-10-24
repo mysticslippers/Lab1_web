@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <title>Lab1_web</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link href="../styles/style.scss" rel="stylesheet"/>
+    <link href="../styles/main.css" rel="stylesheet"/>
     <script src="../js/scripts/draw.js" type="application/javascript"></script>
     <script src="../js/scripts/selectOnlyOne.js" type="text/javascript"></script>
-    <script src="../js/scripts/handleRequest.js"></script>
-    <script src="../js/scripts/clean.js"></script>
     <script defer src="../js/scripts/validate.js"></script>
 </head>
 
@@ -17,8 +15,8 @@
     <header class="header" id="header-id">
         <div class="presentation" id="presentation-id">
             <span class="presentation-text" id="presentation-text-id">
-                <p>Лабораторная работа по вебу №1</p>
                 <p>Михайлов Дмитрий Андреевич</p>
+                <p>Группа P3218</p>
                 <p>Вариант №2809</p>
             </span>
         </div>
@@ -32,7 +30,7 @@
         </div>
         <!--Форма-->
         <div class="data" id="data-id">
-            <form class="data-form" id="data-form-id" name="data-input-form">
+            <form class="data-form" id="data-form-id" name="data-input-form" onsubmit="validate(this)">
                 <div class="x-input-form" id="x-input-form-id">
                     <p>Введите координату X:</p>
                     <label class="x-input-label" for="x-input-choice1">
@@ -92,39 +90,39 @@
 
                 <div class="y-input-form" id="y-input-form-id">
                     <p>Введите координату Y:</p>
-                    <label for="y-input-choice">
+                    <label class="y-input-label" for="y-input-choice">
                         <input type="text" id="y-input-choice" name="y-input" placeholder="Введите значение из диапозона (-5...5)"/>
                     </label>
                 </div>
 
                 <div class="r-input-form" id="r-input-form-id">
                     <p>Введите R:</p>
-                    <label for="r-input-choice1" class="checkbox-label">
-                        <input type="checkbox" class="checkbox-input" id="r-input-choice1" name="r-input" value="1"/>
+                    <label class="r-input-label" for="r-input-choice1">
+                        <input type="checkbox" class="checkbox-input" id="r-input-choice1" name="r-input" value="1" onclick="selectOnlyOne(this)"/>
                         <span class="checkbox-fake"></span>
                         <span id="r-input-choice1-text">1</span>
                     </label>
 
-                    <label for="r-input-choice2" class="checkbox-label">
-                        <input type="checkbox" class="checkbox-input" id="r-input-choice2" name="r-input" value="2"/>
+                    <label class="r-input-label" for="r-input-choice2">
+                        <input type="checkbox" class="checkbox-input" id="r-input-choice2" name="r-input" value="2" onclick="selectOnlyOne(this)"/>
                         <span class="checkbox-fake"></span>
                         <span id="r-input-choice2-text">2</span>
                     </label>
 
-                    <label for="r-input-choice3" class="checkbox-label">
-                        <input type="checkbox" class="checkbox-input" id="r-input-choice3" name="r-input" value="3"/>
+                    <label class="r-input-label" for="r-input-choice3">
+                        <input type="checkbox" class="checkbox-input" id="r-input-choice3" name="r-input" value="3" onclick="selectOnlyOne(this)"/>
                         <span class="checkbox-fake"></span>
                         <span id="r-input-choice3-text">3</span>
                     </label>
 
-                    <label for="r-input-choice4" class="checkbox-label">
-                        <input type="checkbox" class="checkbox-input" id="r-input-choice4" name="r-input" value="4"/>
+                    <label class="r-input-label" for="r-input-choice4">
+                        <input type="checkbox" class="checkbox-input" id="r-input-choice4" name="r-input" value="4" onclick="selectOnlyOne(this)"/>
                         <span class="checkbox-fake"></span>
                         <span id="r-input-choice4-text">4</span>
                     </label>
 
-                    <label for="r-input-choice5" class="checkbox-label">
-                        <input type="checkbox" class="checkbox-input" id="r-input-choice5" name="r-input" value="5"/>
+                    <label class="r-input-label" for="r-input-choice5">
+                        <input type="checkbox" class="checkbox-input" id="r-input-choice5" name="r-input" value="5" onclick="selectOnlyOne(this)"/>
                         <span class="checkbox-fake"></span>
                         <span id="r-input-choice5-text">5</span>
                     </label>
@@ -137,6 +135,15 @@
                     </button>
                 </div>
             </form>
+            <br/>
+
+            <div class="clear-data-table" id="clear-data-table-id">
+                <button class="button-clear-data" id="button-clear-data-id" onclick="clean()">
+                <span class="text-button-clear-data" id="text-button-clear-data-id">
+                    Очистить таблицу!
+                </span>
+                </button>
+            </div>
         </div>
 
         <!--Таблица с результатами-->

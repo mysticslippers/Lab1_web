@@ -1,0 +1,7 @@
+@import "templates";
+
+.coordinate-plane{
+  @extend %divs;
+  @include divs_sizes(400px, 400px);
+  @include divs_position(500px, 250px);
+}

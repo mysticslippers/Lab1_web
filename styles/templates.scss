@@ -1,0 +1,66 @@
+$background_div_color: #faa5a5;
+$focus_color: #ff4c77;
+$box_shadow_color: #E40045;
+$background_empty_color: #fff;
+$error_text_color: #ff0000;
+$font_family: Times, Times New Roman, serif;
+$font_color: black;
+
+@mixin divs_position($left, $top){
+  left: $left;
+  top: $top;
+}
+
+@mixin divs_sizes($height, $width){
+  height: $height;
+  width: $width;
+}
+
+@mixin font_size_align($size, $align){
+  font-size: $size;
+  text-align: $align;
+}
+
+@mixin border($size){
+  border: $size black solid;
+}
+
+@mixin underline_border($size){
+  border-bottom: $size black solid;
+}
+
+%divs{
+  background-color: $background_div_color;
+  margin: auto;
+  border-radius: 28px;
+  position: absolute;
+  padding: 15px;
+  @include border(5px);
+}
+
+%fonts{
+  font-weight: bold;
+  font-family: $font_family;
+  color: $font_color;
+}
+
+%buttons{
+  @include border(1px);
+  border-radius: 5px;
+  background-color: $background_empty_color;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+%thead_tbody{
+  @include border(5px);
+  padding: 12px;
+}
+
+%error_labels{
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+  color: $error_text_color;
+}
