@@ -1,0 +1,11 @@
+@import "templates";
+
+#gif-block-id{
+  margin: auto;
+  position: absolute;
+  @include divs_sizes(300px, 422px);
+  @include divs_position(505px, 700px);
+  @include border(5px);
+  background: url("../public/another.gif") no-repeat scroll 8% 40%;
+  border-radius: 10px;
+}

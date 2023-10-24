@@ -4,6 +4,7 @@
   @extend %divs;
   @include divs_position(20px, 0);
   @include divs_sizes(150px, 300px);
+
   .presentation p{
     @extend %fonts;
     @include font_size_align(20px, left);

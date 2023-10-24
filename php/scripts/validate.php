@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 function validateX($xInput): bool{
     $regExp = "/[-+]?\d+[.]?\d{0,15}/";
-    return (is_numeric($xInput)) and (preg_match($regExp, strval($xInput))) and ((-4 <= $xInput) and ($xInput <= 4));
+    return (is_numeric($xInput)) and (preg_match($regExp, strval($xInput))) and ((-2 <= $xInput) and ($xInput <= 2));
 }
 
 function validateY($yInput): bool{
     $regExp = "/[-+]?\d+[.]?\d{0,15}/";
-    return (is_numeric($yInput)) and (preg_match($regExp, strval($yInput))) and ((-3 <= $yInput) and ($yInput <= 3));
+    return (is_numeric($yInput)) and (preg_match($regExp, strval($yInput))) and ((-5 <= $yInput) and ($yInput <= 5));
 }
 
 function validateR($rInput): bool{

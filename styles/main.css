@@ -1,7 +1,7 @@
 .coordinate-plane, .data, .header {
   background-color: #faa5a5;
   margin: auto;
-  border-radius: 28px;
+  border-radius: 10px;
   position: absolute;
   padding: 15px;
   border: 5px black solid;
@@ -50,7 +50,7 @@
 .coordinate-plane, .data, .header {
   background-color: #faa5a5;
   margin: auto;
-  border-radius: 28px;
+  border-radius: 10px;
   position: absolute;
   padding: 15px;
   border: 5px black solid;
@@ -215,7 +215,7 @@
 .coordinate-plane, .header, .data {
   background-color: #faa5a5;
   margin: auto;
-  border-radius: 28px;
+  border-radius: 10px;
   position: absolute;
   padding: 15px;
   border: 5px black solid;
@@ -260,7 +260,57 @@
 .header, .data, .coordinate-plane {
   background-color: #faa5a5;
   margin: auto;
-  border-radius: 28px;
+  border-radius: 10px;
+  position: absolute;
+  padding: 15px;
+  border: 5px black solid;
+}
+
+.result-table {
+  margin: auto;
+  padding: 15px;
+  position: absolute;
+}
+
+.result-table .table, .header .presentation p, .data .data-form p,
+.data .x-input-label,
+.data .y-input-label,
+.data .r-input-label, #y-input-form-id input, .button-submit span, .button-clear-data span {
+  font-weight: bold;
+  font-family: Times, Times New Roman, serif;
+  color: black;
+}
+
+.button-submit, .button-clear-data {
+  border: 1px black solid;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.result-table .table .thead, .result-table .table .tbody tr, .result-table .table th, .result-table .table td {
+  border: 5px black solid;
+  padding: 12px;
+}
+
+#gif-block-id {
+  margin: auto;
+  position: absolute;
+  height: 300px;
+  width: 422px;
+  left: 505px;
+  top: 700px;
+  border: 5px black solid;
+  background: url("../public/another.gif") no-repeat scroll 8% 40%;
+  border-radius: 10px;
+}
+
+.header, .data, .coordinate-plane {
+  background-color: #faa5a5;
+  margin: auto;
+  border-radius: 10px;
   position: absolute;
   padding: 15px;
   border: 5px black solid;
