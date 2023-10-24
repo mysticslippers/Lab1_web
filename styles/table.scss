@@ -1,0 +1,19 @@
+@import "templates";
+
+.result-table{
+  @extend %table_divs;
+  @include divs_position(950px, 210px);
+
+  .table{
+    @extend %fonts;
+    @include font_size_align(16px, left);
+    background-color: $background_div_color;
+    border-collapse: collapse;
+    margin: 25px 0;
+    min-width: 400px;
+
+    .thead, .tbody tr, th, td{
+      @extend %thead_tbody;
+    }
+  }
+}

@@ -38,6 +38,12 @@ $font_color: black;
   @include border(5px);
 }
 
+%table_divs{
+  margin: auto;
+  padding: 15px;
+  position: absolute;
+}
+
 %fonts{
   font-weight: bold;
   font-family: $font_family;

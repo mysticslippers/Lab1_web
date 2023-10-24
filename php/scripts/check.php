@@ -24,10 +24,11 @@ function checkHit($xInput, $yInput, $rInput): string{
         "Попал!" : "Промах!";
 }
 
-if($_SERVER["REQUEST_METHOD"] == "GET"){
-    $response[0] = floatval($_GET["x-input"]);
-    $response[1] = floatval($_GET["y-input"]);
-    $response[2] = floatval($_GET["r-input"]);
+if($_SERVER["REQUEST_METHOD"] == "POST"){
+    $body = preg_split($inputRegExp, file_get_contents('php://input'));
+    $response[0] = floatval($body[1]);
+    $response[1] = floatval($body[2]);
+    $response[2] = floatval($body[3]);
     if(validateX($response[0]) and validateY($response[1]) and validateR($response[2])){
         $response[3] = checkHit($response[0], $response[1], $response[2]);
         $response[4] = number_format(microtime(true) - $startExecutionTime, 8, ".", "") * 100000;

@@ -7,7 +7,13 @@
   border: 5px black solid;
 }
 
-.button-submit span, .button-clear-data span, #y-input-form-id input, .data .data-form p,
+.result-table {
+  margin: auto;
+  padding: 15px;
+  position: absolute;
+}
+
+.result-table .table, .button-submit span, .button-clear-data span, #y-input-form-id input, .data .data-form p,
 .data .x-input-label,
 .data .y-input-label,
 .data .r-input-label, .header .presentation p {
@@ -23,6 +29,11 @@
   outline: none;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.result-table .table .thead, .result-table .table .tbody tr, .result-table .table th, .result-table .table td {
+  border: 5px black solid;
+  padding: 12px;
 }
 
 .header {
@@ -45,7 +56,13 @@
   border: 5px black solid;
 }
 
-.button-submit span, .button-clear-data span, #y-input-form-id input, .data .data-form p,
+.result-table {
+  margin: auto;
+  padding: 15px;
+  position: absolute;
+}
+
+.result-table .table, .button-submit span, .button-clear-data span, #y-input-form-id input, .data .data-form p,
 .data .x-input-label,
 .data .y-input-label,
 .data .r-input-label, .header .presentation p {
@@ -61,6 +78,11 @@
   outline: none;
   transition: 0.3s;
   cursor: pointer;
+}
+
+.result-table .table .thead, .result-table .table .tbody tr, .result-table .table th, .result-table .table td {
+  border: 5px black solid;
+  padding: 12px;
 }
 
 .data {
@@ -199,7 +221,13 @@
   border: 5px black solid;
 }
 
-.header .presentation p, .data .data-form p,
+.result-table {
+  margin: auto;
+  padding: 15px;
+  position: absolute;
+}
+
+.result-table .table, .header .presentation p, .data .data-form p,
 .data .x-input-label,
 .data .y-input-label,
 .data .r-input-label, #y-input-form-id input, .button-submit span, .button-clear-data span {
@@ -217,6 +245,11 @@
   cursor: pointer;
 }
 
+.result-table .table .thead, .result-table .table .tbody tr, .result-table .table th, .result-table .table td {
+  border: 5px black solid;
+  padding: 12px;
+}
+
 .coordinate-plane {
   height: 400px;
   width: 400px;
@@ -224,6 +257,56 @@
   top: 250px;
 }
 
+.header, .data, .coordinate-plane {
+  background-color: #faa5a5;
+  margin: auto;
+  border-radius: 28px;
+  position: absolute;
+  padding: 15px;
+  border: 5px black solid;
+}
+
+.result-table {
+  margin: auto;
+  padding: 15px;
+  position: absolute;
+}
+
+.result-table .table, .header .presentation p, .data .data-form p,
+.data .x-input-label,
+.data .y-input-label,
+.data .r-input-label, #y-input-form-id input, .button-submit span, .button-clear-data span {
+  font-weight: bold;
+  font-family: Times, Times New Roman, serif;
+  color: black;
+}
+
+.button-submit, .button-clear-data {
+  border: 1px black solid;
+  border-radius: 5px;
+  background-color: #fff;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.result-table .table .thead, .result-table .table .tbody tr, .result-table .table th, .result-table .table td {
+  border: 5px black solid;
+  padding: 12px;
+}
+
+.result-table {
+  left: 950px;
+  top: 210px;
+}
+.result-table .table {
+  font-size: 16px;
+  text-align: left;
+  background-color: #faa5a5;
+  border-collapse: collapse;
+  margin: 25px 0;
+  min-width: 400px;
+}
 html {
   height: 100%;
   background: url("../public/background.gif") no-repeat fixed;
