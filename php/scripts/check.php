@@ -33,11 +33,11 @@ function checkHit($xInput, $yInput, $rInput): string{
 if($_SERVER["REQUEST_METHOD"] == "POST"){
     header("Content-Type: application/json");
     $body = json_decode(file_get_contents("php://input"), true);
-    $response[0] = isset($body['x_input']) ? floatval($body['x_input']) : 0;
-    $response[1] = isset($body['y_input']) ? floatval($body['y_input']) : 0;
-    $response[2] = isset($body['r_input']) ? floatval($body['r_input']) : 0;
+    $response[0] = $body['x_input'] ?? "Пусто!";
+    $response[1] = $body['y_input'] ?? "Пусто!";
+    $response[2] = $body['r_input'] ?? "Пусто!";
     if(validateX($response[0]) and validateY($response[1]) and validateR($response[2])){
-        $response[3] = checkHit($response[0], $response[1], $response[2]);
+        $response[3] = checkHit(floatval($response[0]), floatval($response[1]), floatval($response[2]));
         $response[4] = number_format(microtime(true) - $startExecutionTime, 8, ".", "") * 100000;
     }
     $responseJson["x_input"] = $response[0];
